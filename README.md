@@ -1,6 +1,6 @@
 # Sherlock Holmes Next Word Predictor 🕵️‍♂️📖
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](____)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://word-prediction-by-nojan.streamlit.app/)
 
 **👆 Click the Streamlit logo above to use the live web app!**
 
