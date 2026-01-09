@@ -2,6 +2,8 @@ import streamlit as st
 import tensorflow as tf
 import pickle
 import numpy as np
+import os
+import gdown
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # ==========================================
@@ -37,11 +39,22 @@ st.markdown("""
 # 2. LOAD RESOURCES (Cached for speed)
 # ==========================================
 @st.cache_resource
+
+@st.cache_resource
 def load_resources():
-    # Load Model
-    model = tf.keras.models.load_model('Word_Prediction.keras')
+    #Define the Google Drive ID
+    file_id = '1UzgXAMyvwOIpe62Wq5qu-CNQxqXZBokB' 
+    output_model_file = 'Word_Prediction.keras'
     
-    # Load Tokenizer
+    #Check if model file exists locally; if not, download it
+    if not os.path.exists(output_model_file):
+        url = f'https://drive.google.com/uc?id={file_id}'
+        gdown.download(url, output_model_file, quiet=False)
+
+    #Load the model
+    model = tf.keras.models.load_model(output_model_file)
+    
+    #Load the Tokenizer
     with open('tokenizer.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
         
