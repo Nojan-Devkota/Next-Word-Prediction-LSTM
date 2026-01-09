@@ -58,8 +58,8 @@ The model uses a **Stacked LSTM** architecture designed to capture sequential de
 
 To generate text, you need the saved model (`Word_Prediction.keras`) and the tokenizer (`tokenizer.pickle`).
 
-📥 **[Click here to download the Model ](____)** <br>
-📥 **[Click here to download the Tokenizer ](____)**
+📥 **[Click here to download the Model ](https://drive.google.com/file/d/1UzgXAMyvwOIpe62Wq5qu-CNQxqXZBokB/view?usp=drive_link)** <br>
+📥 **[Click here to download the Tokenizer ](https://drive.google.com/file/d/17-oakK2t4O_7UAhfzMpivEI-LZ85ilg4/view?usp=sharing)**
 
 ```python
 import tensorflow as tf
